@@ -66,7 +66,7 @@ h6{
 
 p{
 	font-size: rem(20);
-	margin:0;
+	margin: .5rem 0;
 }
 
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
@@ -192,7 +192,6 @@ section.news {
 	flex-direction: column;
 
 	article{
-	align-items: center;
 	margin-bottom: rem(50);
 
 		a{
@@ -200,14 +199,22 @@ section.news {
 			text-transform:uppercase;
 			text-decoration: none;
 			border-bottom:2px solid $red;
-			letter-spacing: 0.3rem;
+			letter-spacing: 0.2rem;
 		}
 
 		p{
 			font-size:	rem(18);
 			line-height: 1.2;
-			font-weight: bold;
 			color:#444;
+			margin: .9rem 0;
+		}
+
+		div{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 1.1rem 0;
+			align-items: flex-start;
 		}
 	}
 }
@@ -220,6 +227,7 @@ span.date{
 .pagination {
 	margin: auto;
 	font-size: rem(25);
+	padding: 0;
 
 	li{
 	display: inline-block;
@@ -281,8 +289,13 @@ footer{
 	}
 }
 
+@media only screen and (min-width : 2000px) {
+	html{
+		font-size:32px;
+	}
+}
 
-@media only screen and (min-width : 1441px) {
+@media only screen and (max-width : 1920px) {
 	html{
 		font-size:23px;
 	}
@@ -319,6 +332,10 @@ footer{
 
 	.contact form{
 		margin: 1.5rem 0;
+	}
+
+	section.news figure{
+		margin:0;
 	}
 }
 

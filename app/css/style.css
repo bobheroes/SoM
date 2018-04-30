@@ -4995,7 +4995,7 @@ h6 {
 
 p {
   font-size: 1.11111rem;
-  margin: 0;
+  margin: .5rem 0;
 }
 
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
@@ -5123,7 +5123,6 @@ section.news {
 }
 
 section.news article {
-  align-items: center;
   margin-bottom: 2.77778rem;
 }
 
@@ -5132,14 +5131,22 @@ section.news article a {
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 2px solid #cd4a4b;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 section.news article p {
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: bold;
   color: #444;
+  margin: .9rem 0;
+}
+
+section.news article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.1rem 0;
+  align-items: flex-start;
 }
 
 span.date {
@@ -5150,6 +5157,7 @@ span.date {
 .pagination {
   margin: auto;
   font-size: 1.38889rem;
+  padding: 0;
 }
 
 .pagination li {
@@ -5209,7 +5217,13 @@ footer p {
   padding: 0 0 0.55556rem 0;
 }
 
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
   html {
     font-size: 23px;
   }
@@ -5243,5 +5257,8 @@ footer p {
   }
   .contact form {
     margin: 1.5rem 0;
+  }
+  section.news figure {
+    margin: 0;
   }
 }
