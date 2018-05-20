@@ -5040,6 +5040,10 @@ header input[type="submit"]:hover {
   transform: scale(1.03);
 }
 
+header.about {
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.3) 100%), url(../img/global.jpg);
+}
+
 img {
   max-width: 100%;
 }
@@ -5070,6 +5074,85 @@ nav ul a {
 
 nav ul a:hover {
   color: #fff;
+}
+
+.game {
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.5) 0%, rgba(10, 10, 10, 0.5) 100%), url(../img/owl.png) center center;
+  background-size: cover, cover;
+  padding: 0;
+  position: relative;
+}
+
+.game figure {
+  z-index: 1;
+  margin: 0;
+}
+
+.game img {
+  width: 40vw;
+  margin: -4rem 0 -1.4rem -4.5rem;
+}
+
+.game h2 {
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.game::before {
+  content: '';
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  opacity: .6;
+  top: 0;
+  background: #fff;
+  z-index: 0;
+}
+
+.game::after {
+  content: '';
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  opacity: .6;
+  bottom: 0;
+  background: #fff;
+  z-index: 0;
+}
+
+.latest {
+  padding: 0;
+  background: #101010;
+  z-index: 2;
+  position: relative;
+}
+
+.latest figure {
+  margin: 0  0 -0.3rem 0;
+}
+
+.latest img {
+  margin-top: -10vh;
+  width: 115%;
+  max-width: 113%;
+}
+
+.latest input[type="button"] {
+  background: #cd4a4b;
+  width: 11.11111rem;
+  height: 2.77778rem;
+  border: none;
+  border-radius: 0.22222rem;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 1.11111rem;
+  transition: all .3s ease-out;
+}
+
+.latest input[type="button"]:hover {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 form {
@@ -5104,13 +5187,16 @@ section {
 }
 
 section.team,
-section.news {
+section.news,
+section.plot {
   background: url(../img/root1.png) no-repeat 0% -10%, url(../img/root2.png) no-repeat 100% -14%, #fff;
   color: #000;
   background-size: 30%, 15%;
 }
 
-section.team .item div {
+section.team .item div,
+.latest div:first-of-type,
+.game div {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -5172,6 +5258,51 @@ span.date {
 
 .pagination li a.active {
   border-bottom: 2px solid #cd4a4b;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.plot img {
+  width: 50%;
+  min-width: 290px;
+}
+
+.plot img:first-of-type {
+  float: left;
+  padding: 0 1rem 1rem 0;
+}
+
+.plot img:last-of-type {
+  float: right;
+  padding: .3rem 0 1rem 1rem;
+}
+
+.plot p {
+  font-size: 1rem;
+}
+
+.char {
+  padding: 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.6) 100%), url(../img/char.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.char .char_pic {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.char .char_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.char .row {
+  margin-bottom: 0;
 }
 
 footer {
@@ -5239,6 +5370,17 @@ footer p {
   html {
     font-size: 14px;
   }
+  .game::after,
+  .game::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .latest img {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -5248,11 +5390,15 @@ footer p {
   nav > ul li:nth-child(3) {
     order: -1;
   }
+  .char_pic {
+    order: 2;
+  }
   nav > ul li:not(:nth-child(3)) {
     display: none;
   }
   .address,
-  section.news {
+  section.news,
+  .plot {
     padding: 1rem;
   }
   .contact form {
@@ -5260,5 +5406,18 @@ footer p {
   }
   section.news figure {
     margin: 0;
+  }
+  .plot img {
+    width: 100%;
+  }
+  .plot img:first-of-type, .plot img:last-of-type {
+    float: none;
+    padding: 0;
+  }
+  .game {
+    padding: 10vh 1vw;
+  }
+  .game figure {
+    display: none;
   }
 }

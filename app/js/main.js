@@ -6,7 +6,7 @@ $(document).ready(function(){
         autoplay:true,
         autoplaySpeed: 2000,
         autoplayTimeout: 10000,
-    });
+    });  
   });
 
   $("nav li:nth-child(3)").click(function(){
