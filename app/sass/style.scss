@@ -188,6 +188,10 @@ nav{
 			img{
 				width: 100%;
 			}
+
+			&:nth-child(3){
+				width:20%;
+			}
 		}
 
 		a{
@@ -728,6 +732,7 @@ footer{
 	nav> ul li:nth-child(3){
 		order:-1;
 		position: relative;
+		width: 215px;
 
 		&::before {
 			content: '';
