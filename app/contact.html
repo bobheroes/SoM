@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome-all.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 </head>
@@ -14,7 +15,7 @@
 			<ul>
 				<li><a href="#">Главная</a></li>
 				<li><a href="#">О мире</a></li>
-				<li><img src="img/logo.png" alt="logo"></li>
+				<li><img src="img/logo.svg" alt="logo"></li>
 				<li><a href="#">Новости</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
@@ -26,7 +27,12 @@
                         <input  class="box" type="text" placeholder="Имя">
                         <input  class="box" type="email" placeholder="Email">
                         <textarea name="lol" id="lol" cols="30" rows="10" placeholder="Ваш фидбэк"></textarea>
-                        <input  class="box" type="submit">
+                        <fieldset><label for="agree" class="fake-label">
+                            <input type="checkbox" name="agree" id="agree">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                        </label>
+            <p>Я принимаю условия <a href="#" target="_blank">соглашения</a></p></fieldset> 
+                        <button class="sbm-btn" type="submit" disabled>Отправить</button>
                     </form>
             </div>
             
