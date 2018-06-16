@@ -1413,19 +1413,22 @@ section.news {
   padding-bottom: 0;
 }
 
-section.news .wrapper {
+section.news .list-view {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-section.news figure {
-  position: relative;
-  overflow: hidden;
+section.news .list-view div {
   min-width: 320px;
   flex: 1 1 33.33%;
   height: auto;
+}
+
+section.news figure {
+  position: relative;
+  overflow: hidden;
   background: #3085a3;
   cursor: pointer;
   margin: 0;
@@ -1718,6 +1721,7 @@ footer div {
 footer ul {
   list-style: none;
   display: flex;
+  margin-left: auto;
 }
 
 footer ul li {

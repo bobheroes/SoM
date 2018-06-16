@@ -29,7 +29,3 @@ $("nav li:nth-child(3)").click(function(){
     }
 })
 });
-
-
-
-

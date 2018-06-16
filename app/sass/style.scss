@@ -356,20 +356,22 @@ section.team .item div,
 section.news {
 	padding-bottom:0; 
 
-	.wrapper{
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+	.list-view{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		div{
+		min-width: 320px;
+		flex: 1 1 33.33%;
+		height: auto;
+		}
 	}
-	
 
 	figure {
 		position: relative;
 		overflow: hidden;
-		min-width: 320px;
-		flex: 1 1 33.33%;
-		height: auto;
 		background: #3085a3;
 		cursor: pointer;
 		margin: 0;
@@ -657,6 +659,7 @@ footer{
 	ul{
 		list-style: none;
 		display: flex;
+		margin-left: auto;
 
 		li{
 			padding: rem(15);
@@ -672,8 +675,6 @@ footer{
 			text-decoration: none;
 			color:$red;
 			font-size: rem(25);
-
-			
 		}
 	}
 	a{
