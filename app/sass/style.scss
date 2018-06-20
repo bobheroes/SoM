@@ -360,28 +360,26 @@ section.news {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
-
-		div{
-		min-width: 320px;
-		flex: 1 1 33.33%;
-		height: auto;
-		}
+		align-items: stretch;
 	}
 
-	figure {
+	figure{
 		position: relative;
 		overflow: hidden;
 		background: #3085a3;
 		cursor: pointer;
 		margin: 0;
+		min-width: 320px;
+		flex: 1 1 33.33%;
+		height: auto;
+		max-width: 55%;
 	}
 	
 	figure img {
 		position: relative;
 		display: block;
 		min-height: 100%;
-		max-width: 100%;
+		width: 100%;
 		opacity: 0.8;
 	}
 	
@@ -455,7 +453,7 @@ section.news {
 	
 	figure.effect-goliath:hover h2,
 	figure.effect-goliath:hover .date{
-		transform: translate3d(0,-25rem,0);
+		transform: translate3d(0,-30rem,0);
 	}
 	
 	figure.effect-goliath:hover p:last-of-type {
@@ -781,6 +779,7 @@ footer{
 
 	section.news figure{
 		margin:0;
+		max-width: 100%;
 	}
 
 	.plot img{
